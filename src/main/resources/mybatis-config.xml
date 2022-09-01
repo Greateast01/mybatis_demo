@@ -24,6 +24,10 @@
         <!--以包为单位，设置改包下所有的类型都拥有默认的别名，即类名且不区分大小写-->
         <package name="com.swd.pojo"/>
     </typeAliases>
+    
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
 
     <!--设置连接数据库的环境-->
     <environments default="development">

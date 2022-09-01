@@ -11,7 +11,7 @@
     </resultMap>
 
     <select id="getEmpAndDeptByStepTwo" resultMap="EmpAndDeptByStepTwoResultMap">
-        select * from tb_dept where did = #{did};
+        select * from tb_dept where did = #{did}
     </select>
 
     <resultMap id="deptAndEmpResultMap" type="Dept">
@@ -27,7 +27,7 @@
     </resultMap>
 
     <select id="getDeptAndEmp" resultMap="deptAndEmpResultMap">
-        select * from tb_dept left join tb_emp on tb_dept.did = tb_emp.did where tb_dept.did = #{did};
+        select * from tb_dept left join tb_emp on tb_dept.did = tb_emp.did where tb_dept.did = #{did}
     </select>
 
 
@@ -41,6 +41,6 @@
     </resultMap>
 
     <select id="getDeptAndEmpByStepOne" resultMap="deptAndEmpByStepOneResultMap">
-        select * from tb_dept where did = #{did};
+        select * from tb_dept where did = #{did}
     </select>
 </mapper>

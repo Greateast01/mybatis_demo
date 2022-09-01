@@ -5,6 +5,6 @@
 <mapper namespace="com.swd.mapper.CacheMapper">
 
     <select id="getEmpByEid" resultType="Emp">
-        select * from tb_emp where eid = #{eid};
+        select * from tb_emp where eid = #{eid}
     </select>
 </mapper>

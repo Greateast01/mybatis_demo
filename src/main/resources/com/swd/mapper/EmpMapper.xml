@@ -5,7 +5,7 @@
 <mapper namespace="com.swd.mapper.EmpMapper">
 
     <select id="getAllEmpOld" resultType="Emp">
-        select * from tb_emp;
+        select * from tb_emp
         <!-- 给字段起别名和属性名一致 -->
         <!--   select eid,emp_name empName,age,sex,email from tb_emp; -->
 
@@ -22,7 +22,7 @@
 
     <select id="getAllEmp" resultMap="empResultMap">
         select *
-        from tb_emp;
+        from tb_emp
     </select>
 
     <resultMap id="empAndDeptResultMapOne" type="Emp">
@@ -66,15 +66,19 @@
                      select="com.swd.mapper.DeptMapper.getEmpAndDeptByStepTwo"
                      column="did"
                      fetchType="eager"
-                        >
+        >
         </association>
     </resultMap>
 
     <select id="getEmpAndDeptByStepOne" resultMap="empAndDeptByStepResultMap">
-        select * from tb_emp where eid = #{eid};
+        select *
+        from tb_emp
+        where eid = #{eid}
     </select>
 
     <select id="getDeptAndEmpByStepTwo" resultType="Emp">
-        select * from tb_emp where did = #{did};
+        select *
+        from tb_emp
+        where did = #{did}
     </select>
 </mapper>
